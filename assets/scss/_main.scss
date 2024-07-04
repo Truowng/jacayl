@@ -133,6 +133,13 @@ header {
     width: 70px;
   }
 
+  .menu-btn {
+    width: 40px;
+    padding: 0;
+    border: none;
+    display: none;
+  }
+
   .pc {
     .nav-list-0 {
       @include flex(unset, center, 30px);
@@ -203,20 +210,51 @@ header {
   }
 
   .mb {
+    background: $spring-wood;
+    padding: 30px;
+    .nav-header {
+      @include flex(space-between, end, 20px);
+      margin-bottom: 50px;
+    }
+    .close-btn {
+      width: 40px;
+      border: none;
+      padding: 0;
+    }
+    .logo {
+      width: 50px;
+    }
     .nav-item-0 {
       margin-bottom: 20px;
       a {
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-weight: $fw-l;
-        color: $white;
+        color: $black;
         transition: all ease 0.3s;
         @include flex(unset, center, 7px);
         font-family: $font-barlowC;
         letter-spacing: 0.3em;
+        font-size: 16px;
+        width: 100%;
         .icon {
           width: 8px;
         }
+      }
+    }
+    .nav-list-1 {
+      padding-left: 15px;
+      margin-top: 5px;
+    }
+    .nav-item-1 {
+      a {
+        font-weight: $fw-l;
+        text-transform: capitalize;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba($color: $black, $alpha: 0.1);
+        font-family: $font-barlow;
+        letter-spacing: 0.05em;
+        margin: 0;
       }
     }
   }
@@ -266,6 +304,7 @@ header {
     }
     .banner-image {
       position: relative;
+      height: 100%;
       img {
         height: 100%;
         object-fit: cover;
@@ -437,5 +476,18 @@ footer {
     margin-top: 80px;
     border-top: 1px solid rgba($color: $white, $alpha: 0.1);
     text-align: center;
+  }
+}
+
+// RESPONSIVE
+
+@include tablet {
+  header {
+    .pc {
+      display: none;
+    }
+    .menu-btn {
+      display: block;
+    }
   }
 }

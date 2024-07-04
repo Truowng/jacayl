@@ -17,13 +17,13 @@
           </a>
           <nav class="header-nav">
             <button
-              class="btn btn-primary"
+              class="btn menu-btn"
               type="button"
               data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample"
+              data-bs-target="#mobile-menu"
+              aria-controls="mobile-menu"
             >
-              =
+              <img src="./assets/images/menu.svg" alt="Menu" />
             </button>
             <div class="pc">
               <ul class="nav-list-0">
@@ -95,90 +95,93 @@
                 </li>
               </ul>
             </div>
-
             <div
-              class="offcanvas offcanvas-start"
+              class="offcanvas offcanvas-start mb"
               tabindex="-1"
-              id="offcanvasExample"
-              aria-labelledby="offcanvasExampleLabel"
+              id="mobile-menu"
             >
-              <div class="mb">
-                <ul class="nav-list-0">
-                  <li class="nav-item-0">
-                    <a href="#" title="About">About</a>
-                  </li>
-                  <li
-                    class="nav-item-0"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#nav-list-1-#1"
-                    aria-expanded="false"
-                    aria-controls="nav-list-1-#1"
-                  >
-                    <a href="#" title="room & suites"
-                      >room & suites
-                      <div class="icon">
-                        <img
-                          src="./assets/images/caret-down.svg"
-                          alt="Icon"
-                        /></div
-                    ></a>
-                    <ul class="nav-list-1 collapse" id="nav-list-1-#1">
-                      <li class="li nav-item-1">
-                        <a href="#" title="Kim Nguu branch">Kim Nguu branch</a>
-                      </li>
-                      <li class="li nav-item-1">
-                        <a href="#" title="Tran Khat Chan branch"
-                          >Tran Khat Chan branch</a
-                        >
-                      </li>
-                      <li class="li nav-item-1">
-                        <a href="#" title="Hoan Kiem branch"
-                          >Hoan Kiem branch</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item-0">
-                    <a href="#" title="news"
-                      >news
-                      <div class="icon">
-                        <img src="./assets/images/caret-down.svg" alt="Icon" />
-                      </div>
-                    </a>
-                    <ul class="nav-list-1">
-                      <li class="li nav-item-1">
-                        <a href="#" title="Love secret">Love secret</a>
-                      </li>
-                      <li class="li nav-item-1">
-                        <a href="#" title="trends and inspiration"
-                          >trends and inspiration
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item-0">
-                    <a href="#" title="products"
-                      >products
-                      <div class="icon">
-                        <img
-                          src="./assets/images/caret-down.svg"
-                          alt="Icon"
-                        /></div
-                    ></a>
-                    <ul class="nav-list-1">
-                      <li class="li nav-item-1">
-                        <a href="#" title="Toy">Toy</a>
-                      </li>
-                      <li class="li nav-item-1">
-                        <a href="#" title="Gel">Gel </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item-0">
-                    <a href="#" title="booking">booking</a>
-                  </li>
-                </ul>
+              <div class="nav-header">
+                <a href="#" title="Jacayl" class="logo">
+                  <img src="./assets/images/logo-black.svg" alt="Logo" />
+                </a>
+                <button
+                  type="button"
+                  class="btn close-btn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  <img src="./assets/images/close.svg" alt="Close" />
+                </button>
               </div>
+              <ul class="nav-list-0">
+                <li class="nav-item-0">
+                  <a href="#" title="About">About</a>
+                </li>
+                <li
+                  class="nav-item-0"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#nav-list-1-1"
+                  aria-expanded="false"
+                  aria-controls="nav-list-1-1"
+                >
+                  <a href="#" title="room & suites"
+                    >room & suites
+                    <div class="icon">
+                      <img
+                        src="./assets/images/caret-down-black.svg"
+                        alt="Icon"
+                      /></div
+                  ></a>
+                  <ul class="nav-list-1 collapse" id="nav-list-1-1">
+                    <li class="li nav-item-1">
+                      <a href="#" title="Kim Nguu branch">Kim Nguu branch</a>
+                    </li>
+                    <li class="li nav-item-1">
+                      <a href="#" title="Tran Khat Chan branch"
+                        >Tran Khat Chan branch</a
+                      >
+                    </li>
+                    <li class="li nav-item-1">
+                      <a href="#" title="Hoan Kiem branch">Hoan Kiem branch</a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="nav-item-0"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#nav-list-1-2"
+                  aria-expanded="false"
+                  aria-controls="nav-list-1-2"
+                >
+                  <a href="#" title="news"
+                    >news
+                    <div class="icon">
+                      <img
+                        src="./assets/images/caret-down-black.svg"
+                        alt="Icon"
+                      />
+                    </div>
+                  </a>
+                  <ul class="nav-list-1 collapse" id="nav-list-1-2">
+                    <li class="li nav-item-1">
+                      <a href="#" title="Love secret">Love secret</a>
+                    </li>
+                    <li class="li nav-item-1">
+                      <a href="#" title="trends and inspiration"
+                        >trends and inspiration
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item-0">
+                  <a href="#" title="products">products </a>
+                </li>
+                <li class="nav-item-0">
+                  <a href="#" title="booking">booking</a>
+                </li>
+              </ul>
             </div>
           </nav>
         </div>
