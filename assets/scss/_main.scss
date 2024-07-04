@@ -489,5 +489,68 @@ footer {
     .menu-btn {
       display: block;
     }
+    .header-wrapper {
+      align-items: end;
+    }
+  }
+
+  .banner-fullsize {
+    .banner-slide {
+      .content {
+        .title {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@include landscape-phone {
+  .heading-block {
+    .title {
+      font-size: 30px;
+    }
+  }
+  .banner-fullsize {
+    .banner-slide {
+      .content {
+        .title {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .contact {
+    .contact-wrapper {
+      flex-direction: column;
+    }
+    .contact-content,
+    .contact-form {
+      width: 100%;
+    }
+  }
+
+  footer {
+    .footer-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@include extra-mobile {
+  .banner-fullsize {
+    .banner-slide {
+      height: 80vh;
+      .content {
+        .title {
+          font-size: 24px;
+          letter-spacing: 0.3em;
+        }
+        .badge {
+          font-size: 12px;
+        }
+      }
+    }
   }
 }

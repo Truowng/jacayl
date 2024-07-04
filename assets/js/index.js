@@ -23,10 +23,10 @@ if (document.querySelector(".testimonials .testimonials-slider .swiper")) {
       slidesPerView: 1,
       loop: true,
       breakpoints: {
-        576: {
+        767: {
           slidesPerView: 2,
         },
-        767: {
+        991: {
           slidesPerView: 3,
         },
       },

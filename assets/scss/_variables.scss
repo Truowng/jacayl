@@ -18,6 +18,8 @@ $fw-b: 700;
 $fw-eb: 800;
 $fw-bl: 900;
 
+// CONSTANT
+
 // COLOR
 $white: #fff;
 $spring-wood: #f8f5f0;
@@ -40,42 +42,49 @@ $cubic: cubic-bezier(0.77, 0, 0.175, 1);
 // START BREAKPOINT VARIABLES
 @mixin extra-desktop {
   @media (max-width: 1440px) {
+    $container-max: 1320px;
     @content;
   }
 }
 
 @mixin large-desktop {
   @media only screen and (max-width: 1399px) {
+    $container-max: 1320px;
     @content;
   }
 }
 
 @mixin desktop {
   @media only screen and (max-width: 1199px) {
+    $container-max: 1140px;
     @content;
   }
 }
 
 @mixin tablet {
   @media only screen and (max-width: 991px) {
+    $container-max: 960px;
     @content;
   }
 }
 
 @mixin landscape-phone {
   @media only screen and (max-width: 767px) {
+    $container-max: 720px;
     @content;
   }
 }
 
 @mixin extra-mobile {
   @media only screen and (max-width: 576px) {
+    $container-max: 100%;
     @content;
   }
 }
 
 @mixin mobile {
   @media only screen and (max-width: 480px) {
+    $container-max: 100%;
     @content;
   }
 }
