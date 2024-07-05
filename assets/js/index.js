@@ -9,6 +9,18 @@ if (document.querySelector(".banner-fullsize .swiper")) {
     effect: "fade",
   });
 }
+if (document.querySelector(".branch .branch-slider .swiper")) {
+  const branchSlider = new Swiper(".branch .branch-slider .swiper", {
+    direction: "horizontal",
+    speed: 500,
+    loop: true,
+    effect: "fade",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}
 
 if (document.querySelector(".testimonials .testimonials-slider .swiper")) {
   const testimonialsSlider = new Swiper(

@@ -87,6 +87,18 @@
   }
 }
 
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba($color: $white, $alpha: 0.5);
+  opacity: 1;
+  background-color: transparent;
+  transition: all ease 0.3s;
+  &-active {
+    background-color: $spring-wood;
+  }
+}
+
 .heading-block {
   margin-bottom: 30px;
 
@@ -174,7 +186,6 @@ header {
       top: calc(100% + 15px);
       left: 0;
       width: fit-content;
-      padding: 5px 15px;
       background-color: $white;
       display: none;
       border-radius: 5px;
@@ -190,12 +201,18 @@ header {
     }
     .nav-item-1 {
       border-bottom: 1px solid #eee;
+      position: relative;
       &:last-child {
         border: none;
       }
+      &:hover {
+        .nav-list-2 {
+          display: block;
+        }
+      }
       a {
         transition: all ease 0.3s;
-        padding: 10px 0;
+        padding: 10px 15px;
         white-space: nowrap;
         display: block;
         color: $black;
@@ -205,6 +222,31 @@ header {
         &:hover {
           color: $dull-brown;
         }
+      }
+    }
+    .nav-list-2 {
+      position: absolute;
+      top: 0;
+      left: calc(100% + 5px);
+      width: fit-content;
+      background-color: $white;
+      display: none;
+      border-radius: 5px;
+      &::before {
+        width: 15px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -15px;
+        background: transparent;
+        content: "";
+        z-index: 1;
+      }
+    }
+    .nav-item-2 {
+      border-bottom: 1px solid #eee;
+      &:last-child {
+        border: none;
       }
     }
   }
@@ -232,17 +274,23 @@ header {
         font-weight: $fw-l;
         color: $black;
         transition: all ease 0.3s;
-        @include flex(unset, center, 7px);
+        @include flex(space-between, center, 7px);
         font-family: $font-barlowC;
         letter-spacing: 0.3em;
         font-size: 16px;
         width: 100%;
         .icon {
-          width: 8px;
+          @include flex(center, center, unset);
+          width: 20px;
+          padding: 6px;
+          aspect-ratio: 1;
+          border-radius: 500px;
+          background-color: $cod-gray;
         }
       }
     }
-    .nav-list-1 {
+    .nav-list-1,
+    .nav-list-2 {
       padding-left: 15px;
       margin-top: 5px;
     }
