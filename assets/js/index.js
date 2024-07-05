@@ -34,6 +34,10 @@ if (document.querySelector(".testimonials .testimonials-slider .swiper")) {
       spaceBetween: 40,
       slidesPerView: 1,
       loop: true,
+      navigation: {
+        nextEl: ".testimonials .testimonials-slider .slider-btn-next",
+        prevEl: ".testimonials .testimonials-slider .slider-btn-prev",
+      },
       breakpoints: {
         767: {
           slidesPerView: 2,

@@ -99,6 +99,30 @@
   }
 }
 
+.slider-btn-wrapper {
+  position: absolute;
+  top: 50%;
+  width: calc(100% + 40px);
+  left: 50%;
+  z-index: 2;
+  @include flex(space-between, center, unset);
+  transform: translate(-50%, -50%);
+  .slider-btn {
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 500px;
+    background-color: $dull-brown;
+    @include flex(center, center, unset);
+    transition: all ease 0.3s;
+    img {
+      width: 40%;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
 .heading-block {
   margin-bottom: 30px;
 
@@ -554,6 +578,10 @@ footer {
 }
 
 @include landscape-phone {
+  .slider-btn-wrapper {
+    display: none;
+  }
+
   .heading-block {
     .title {
       font-size: 30px;
