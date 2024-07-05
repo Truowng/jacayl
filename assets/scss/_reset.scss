@@ -30,6 +30,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 
 ul,
@@ -48,39 +49,3 @@ img,
 video {
   width: 100%;
 }
-
-// @include extra-desktop {
-//   :root {
-//     --container-max: 1320px;
-//   }
-// }
-// @include large-desktop {
-//   :root {
-//     --container-max: 1140px;
-//   }
-// }
-// @include desktop {
-//   :root {
-//     --container-max: 960px;
-//   }
-// }
-// @include tablet {
-//   :root {
-//     --container-max: 720px;
-//   }
-// }
-// @include landscape-phone {
-//   :root {
-//     --container-max: 540px;
-//   }
-// }
-// @include extra-mobile {
-//   :root {
-//     --container-max: 100%;
-//   }
-// }
-// @include mobile {
-//   :root {
-//     --container-max: 100%;
-//   }
-// }
