@@ -154,6 +154,49 @@
   }
 }
 
+.pagination {
+  @include flex(center, center, 20px);
+  overflow-x: auto;
+
+  width: 100%;
+  .page-wrapper {
+    @include flex(center, center, 10px);
+  }
+  .etc {
+    font-size: 14px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-weight: $fw-l;
+  }
+
+  .page {
+    font-size: 14px;
+    font-weight: $fw-l;
+    color: $gray;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 500px;
+    transition: all ease 0.3s;
+    &.active {
+      background-color: $dull-brown;
+      color: $white;
+    }
+    &:hover {
+      background-color: rgba($color: $gray, $alpha: 0.1);
+    }
+  }
+
+  .btn {
+    &:hover {
+      background-color: rgba($color: $gray, $alpha: 0.1);
+    }
+  }
+}
+
 header {
   position: absolute;
   top: 0;
@@ -658,6 +701,9 @@ footer {
 }
 
 @include extra-mobile {
+  footer {
+    margin-top: 80px;
+  }
   .banner-fullsize {
     .banner-slide {
       height: 80vh;
@@ -671,5 +717,12 @@ footer {
         }
       }
     }
+  }
+
+  .pagination {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: unset;
+    overflow-x: auto;
   }
 }
