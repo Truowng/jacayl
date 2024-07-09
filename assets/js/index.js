@@ -52,3 +52,24 @@ if (document.querySelector(".testimonials .testimonials-slider .swiper")) {
     }
   );
 }
+
+if (document.querySelector(".relate .relate-slider .swiper")) {
+  const relateSlider = new Swiper(".relate .relate-slider .swiper", {
+    direction: "horizontal",
+    speed: 500,
+    spaceBetween: 50,
+    autoplay: {
+      delay: 3000,
+    },
+    loop: true,
+    slidesPerView: 1,
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
