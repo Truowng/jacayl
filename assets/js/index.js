@@ -15,6 +15,9 @@ if (document.querySelector(".branch .branch-slider .swiper")) {
     speed: 500,
     loop: true,
     effect: "fade",
+    autoplay: {
+      delay: 3000,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
