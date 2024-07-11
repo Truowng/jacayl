@@ -335,25 +335,27 @@ header {
     }
     .nav-item-0 {
       margin-bottom: 20px;
+      .link-wrapper {
+        @include flex(space-between, center, 7px);
+      }
       a {
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-weight: $fw-l;
         color: $black;
         transition: all ease 0.3s;
-        @include flex(space-between, center, 7px);
         font-family: $font-barlowC;
         letter-spacing: 0.3em;
         font-size: 16px;
-        width: 100%;
-        .icon {
-          @include flex(center, center, unset);
-          width: 20px;
-          padding: 6px;
-          aspect-ratio: 1;
-          border-radius: 500px;
-          background-color: $cod-gray;
-        }
+        width: fit-content;
+      }
+      .icon {
+        @include flex(center, center, unset);
+        width: 20px;
+        padding: 6px;
+        aspect-ratio: 1;
+        border-radius: 500px;
+        background-color: $cod-gray;
       }
     }
     .nav-list-1,
@@ -362,14 +364,22 @@ header {
       margin-top: 5px;
     }
     .nav-item-1 {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba($color: $black, $alpha: 0.1);
       a {
         font-weight: $fw-l;
         text-transform: capitalize;
-        padding: 10px 0;
-        border-bottom: 1px solid rgba($color: $black, $alpha: 0.1);
+
         font-family: $font-barlow;
         letter-spacing: 0.05em;
         margin: 0;
+      }
+    }
+    .nav-item-2 {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba($color: $black, $alpha: 0.1);
+      &:last-child {
+        border: none;
       }
     }
   }

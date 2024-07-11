@@ -401,22 +401,25 @@ header .mb .logo {
 header .mb .nav-item-0 {
   margin-bottom: 20px;
 }
+header .mb .nav-item-0 .link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
 header .mb .nav-item-0 a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 300;
   color: #000;
   transition: all ease 0.3s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 7px;
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 0.3em;
   font-size: 16px;
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-header .mb .nav-item-0 a .icon {
+header .mb .nav-item-0 .icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -432,14 +435,23 @@ header .mb .nav-list-2 {
   padding-left: 15px;
   margin-top: 5px;
 }
+header .mb .nav-item-1 {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 header .mb .nav-item-1 a {
   font-weight: 300;
   text-transform: capitalize;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-family: "Barlow", sans-serif;
   letter-spacing: 0.05em;
   margin: 0;
+}
+header .mb .nav-item-2 {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .mb .nav-item-2:last-child {
+  border: none;
 }
 
 .banner-fullsize .banner-slide {
