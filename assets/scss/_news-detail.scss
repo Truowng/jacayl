@@ -1,4 +1,4 @@
-.room-detail {
+.news-detail {
   margin-top: 120px;
   $space: 100px;
   .heading-block {
@@ -26,12 +26,12 @@
     }
   }
 
-  .room-detail-wrapper {
+  .news-detail-wrapper {
     @include flex(unset, start, 30px);
   }
 
   .detail {
-    width: 70%;
+    width: 75%;
 
     h1,
     h2,
@@ -101,8 +101,8 @@
     }
   }
 
-  .amenity {
-    width: 30%;
+  .category {
+    width: 25%;
     position: sticky;
     top: 20px;
     .title {
@@ -113,17 +113,33 @@
     }
   }
 
-  .amenity-item {
+  .category-item {
     @include flex(unset, center, 15px);
     margin-bottom: 10px;
     .icon {
-      width: 30px;
+      width: 6px;
+      height: 6px;
+      border-radius: 500px;
+      background-color: $dull-brown;
+      opacity: 0;
+      transition: all ease 0.3s;
     }
     .text {
       font-size: 16px;
       font-weight: $fw-l;
       color: $gray;
       text-transform: capitalize;
+      transform: translateX(-18px);
+      transition: all ease 0.3s;
+      text-align: center;
+    }
+    &:hover {
+      .icon {
+        opacity: 1;
+      }
+      .text {
+        transform: unset;
+      }
     }
   }
 }
@@ -134,20 +150,28 @@
 }
 
 @include tablet {
-  .room-detail {
+  .news-detail {
     .heading-block {
       width: 100%;
     }
-    .room-detail-wrapper {
+    .news-detail-wrapper {
       flex-direction: column-reverse;
       gap: 0;
     }
     .detail,
-    .amenity {
+    .category {
       width: 100%;
       position: initial;
     }
-    .amenity-list {
+    .category {
+      .title {
+        text-align: center;
+      }
+    }
+    .category-item {
+      justify-content: center;
+    }
+    .category-list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 10px;
@@ -169,10 +193,10 @@
 }
 
 @include extra-mobile {
-  .room-detail {
+  .news-detail {
     margin-top: 80px;
     .heading-block,
-    .amenity-list {
+    .category-list {
       &::before {
         width: 100%;
       }
@@ -197,7 +221,7 @@
     .image-group {
       grid-template-columns: repeat(1, 1fr);
     }
-    .amenity-list {
+    .category-list {
       grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 5px;
     }

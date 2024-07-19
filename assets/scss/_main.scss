@@ -622,7 +622,14 @@ header {
         font-family: "Beautique Display";
         text-transform: capitalize;
         margin-bottom: 10px;
-        display: block;
+        display: -webkit-box;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        height: 38px;
         transition: all ease 0.3s;
         &:hover {
           color: #ab8a62;
