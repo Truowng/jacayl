@@ -25,8 +25,9 @@ $white: #fff;
 $spring-wood: #f8f5f0;
 $black: #000;
 $cod-gray: #181818;
-$gray: #666;
+$gray: #b6b6b6;
 $silver-chalice: #adadad;
+$rustic-red: #480301;
 $dull-brown: #ab8a62;
 
 // FUNCTION
@@ -40,65 +41,51 @@ $dull-brown: #ab8a62;
 $cubic: cubic-bezier(0.77, 0, 0.175, 1);
 
 // START BREAKPOINT VARIABLES
+$container-xxl: 1320px;
+$container-xl: 1140px;
+$container-lg: 960px;
+$container-md: 720px;
+$container-sm: 540px;
+$container: 100%;
+
 @mixin extra-desktop {
   @media (max-width: 1440px) {
-    :root {
-      --container-max: 1320px;
-    }
     @content;
   }
 }
 
 @mixin large-desktop {
   @media only screen and (max-width: 1399px) {
-    :root {
-      --container-max: 1140px;
-    }
     @content;
   }
 }
 
 @mixin desktop {
   @media only screen and (max-width: 1199px) {
-    :root {
-      --container-max: 960px;
-    }
     @content;
   }
 }
 
 @mixin tablet {
   @media only screen and (max-width: 991px) {
-    :root {
-      --container-max: 720px;
-    }
     @content;
   }
 }
 
 @mixin landscape-phone {
   @media only screen and (max-width: 767px) {
-    :root {
-      --container-max: 540px;
-    }
     @content;
   }
 }
 
 @mixin extra-mobile {
   @media only screen and (max-width: 576px) {
-    :root {
-      --container-max: 100%;
-    }
     @content;
   }
 }
 
 @mixin mobile {
   @media only screen and (max-width: 480px) {
-    :root {
-      --container-max: 100%;
-    }
     @content;
   }
 }

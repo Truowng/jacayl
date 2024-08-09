@@ -76,7 +76,7 @@
     &.active {
       .icon {
         opacity: 1;
-        background-color: $dull-brown;
+        background-color: $white;
       }
       .text {
         transform: unset;
@@ -123,7 +123,7 @@
         .number {
           font-size: 20px;
           font-family: $font-beautique;
-          color: $dull-brown;
+          color: $white;
         }
       }
       .badge {
@@ -144,6 +144,7 @@
         margin-bottom: 10px;
         display: block;
         transition: all ease 0.3s;
+        color: $white;
         &:hover {
           color: $dull-brown;
         }
@@ -172,6 +173,7 @@
         padding: 10px 0;
         position: relative;
         @include flex(unset, center, 8px);
+        color: $white;
         .icon {
           width: 15px;
           @include flex(center, center, unset);
@@ -183,7 +185,7 @@
           left: 0;
           width: 0%;
           height: 1px;
-          background-color: $gray;
+          background-color: $white;
           transition: all ease 0.3s;
         }
         &:hover {

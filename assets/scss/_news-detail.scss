@@ -41,6 +41,7 @@
     h6 {
       font-family: $font-beautique;
       margin: 20px 0;
+      color: $white;
       &:first-child {
         margin-top: 0;
       }
@@ -110,6 +111,7 @@
       font-family: $font-beautique;
       margin-bottom: 20px;
       text-transform: capitalize;
+      color: $white;
     }
   }
 
@@ -120,7 +122,7 @@
       width: 6px;
       height: 6px;
       border-radius: 500px;
-      background-color: $dull-brown;
+      background-color: $white;
       opacity: 0;
       transition: all ease 0.3s;
     }

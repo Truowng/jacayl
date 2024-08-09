@@ -69,15 +69,28 @@
       text-transform: capitalize;
       margin-bottom: 10px;
       display: block;
-      color: $white;
+    }
+    .price-wrapper {
+      @include flex(space-between, center, 10px);
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+    .line {
+      height: 20px;
+      width: 1px;
+      background-color: rgba($color: $black, $alpha: 0.1);
     }
     .price {
-      margin-bottom: 10px;
       .number {
         font-size: 20px;
         font-family: "Beautique Display";
-        color: $white;
+        color: #ab8a62;
       }
+      font-size: 16px;
+      font-family: $font-barlowC;
+      color: $gray;
+      letter-spacing: 0.05em;
+      font-weight: $fw-l;
     }
     .desc {
       font-weight: $fw-l;
@@ -93,12 +106,11 @@
         font-size: 16px;
         display: block;
         margin-bottom: 20px;
-        color: $white;
       }
       .list {
         @include flex(unset, center, 10px);
         .item {
-          background-color: $black;
+          background-color: $dull-brown;
           border-radius: 3px;
           width: 30px;
           transition: all ease 0.3s;
@@ -122,7 +134,7 @@
       font-size: 30px;
       font-family: $font-beautique;
       margin-bottom: 20px;
-      color: $white;
+      color: $dull-brown;
       text-transform: capitalize;
     }
 
@@ -135,7 +147,6 @@
       h6 {
         font-family: $font-beautique;
         margin: 20px 0;
-        color: $white;
         &:first-child {
           margin-top: 0;
         }

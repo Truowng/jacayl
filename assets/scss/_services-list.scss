@@ -1,4 +1,4 @@
-.room {
+.service {
   margin-top: 120px;
   $space: 100px;
   .heading-block {
@@ -26,9 +26,9 @@
     }
   }
 
-  .room-tab {
+  .service-tab {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 20px;
     margin-bottom: $space;
@@ -45,7 +45,7 @@
     }
   }
 
-  .room-tab-item {
+  .service-tab-item {
     width: 100%;
     @include flex(center, center, 8px);
     .icon {
@@ -57,6 +57,8 @@
       transition: all ease 0.3s;
     }
     .text {
+      display: block;
+      text-align: center;
       font-size: 16px;
       color: $gray;
       transform: translateX(-18px);
@@ -84,7 +86,7 @@
       }
     }
   }
-  .room-group {
+  .service-group {
     $column-gap: 60px;
     display: grid;
     grid-template-columns: calc(100% / 2 - $column-gap/ 2) calc(
@@ -95,7 +97,7 @@
     margin-bottom: 50px;
   }
 
-  .room-slider-item {
+  .service-slider-item {
     margin-bottom: 80px;
     &:last-child {
       margin-bottom: 0;
@@ -108,13 +110,12 @@
         font-size: 30px;
         text-transform: capitalize;
         letter-spacing: 0.05em;
-        color: $white;
       }
     }
   }
 
-  .room-item {
-    .room-item-slider {
+  .service-item {
+    .service-item-slider {
       margin-bottom: 20px;
       .swiper-wrapper {
         height: unset;
@@ -137,7 +138,7 @@
     .content {
       .price-wrapper {
         @include flex(space-between, center, 10px);
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         overflow-x: auto;
       }
       .line {
@@ -158,14 +159,6 @@
           color: $white;
         }
       }
-      .extra-hour {
-        font-size: 16px;
-        font-weight: $fw-l;
-        color: $gray;
-        font-family: $font-barlowC;
-        letter-spacing: 0.05em;
-        margin-bottom: 20px;
-      }
       .badge {
         font-family: $font-barlowC;
         font-weight: $fw-l;
@@ -181,30 +174,15 @@
         font-size: 30px;
         font-family: $font-beautique;
         text-transform: capitalize;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         display: block;
         transition: all ease 0.3s;
         color: $white;
-      }
-      .facility-list {
-        margin-bottom: 20px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 10px;
-        grid-row-gap: 15px;
-      }
-      .facility-item {
-        @include flex(unset, center, 5px);
-        .icon {
-          width: 25px;
-        }
-        .text {
-          font-size: 14px;
-          font-weight: $fw-l;
-          color: $gray;
-          text-transform: capitalize;
+        &:hover {
+          color: $white;
         }
       }
+
       .desc {
         font-weight: $fw-l;
         color: $gray;
@@ -221,7 +199,7 @@
       .btn-wrapper {
         margin-top: 25px;
         padding-top: 25px;
-        border-top: 1px solid rgba($color: $dull-brown, $alpha: 0.2);
+        border-top: 1px solid rgba($color: $white, $alpha: 0.2);
         @include flex(space-between, center, 20px);
       }
       .btn-book-wrapper {
@@ -259,65 +237,32 @@
 
 // RESPONSIVE
 
-@include desktop {
-  .room {
-    .room-item {
-      .content {
-        .facility-list {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-    }
-  }
-}
-
 @include tablet {
-  .room {
-    .room-group {
+  .service {
+    .service-group {
       grid-template-columns: 100%;
     }
     .heading-block {
       width: 100%;
     }
-    .room-item {
-      .content {
-        .facility-list {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-    }
   }
 }
 
 @include landscape-phone {
-  .room {
-    .room-tab {
+  .service {
+    .service-tab {
       grid-template-columns: repeat(3, 1fr);
-    }
-    .room-item {
-      .content {
-        .facility-list {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
     }
   }
 }
 
 @include extra-mobile {
-  .room {
+  .service {
     margin-top: 80px;
-    .room-tab,
+    .service-tab,
     .heading-block {
       &::before {
         width: 100%;
-      }
-    }
-    .room-item {
-      .content {
-        .facility-list {
-          grid-template-columns: repeat(2, 1fr);
-        }
       }
     }
   }

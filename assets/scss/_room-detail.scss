@@ -41,6 +41,7 @@
     h6 {
       font-family: $font-beautique;
       margin: 20px 0;
+      color: $white;
       &:first-child {
         margin-top: 0;
       }
@@ -101,16 +102,47 @@
     }
   }
 
-  .amenity {
+  .title {
+    font-size: 18px;
+    font-family: $font-beautique;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: $white;
+  }
+
+  .sidebar {
     width: 30%;
     position: sticky;
     top: 20px;
-    .title {
+  }
+
+  .price-wrapper {
+    @include flex(space-between, start, 5px);
+    flex-direction: column;
+    margin-bottom: 30px;
+    overflow-x: auto;
+  }
+  .line {
+    height: 20px;
+    width: 1px;
+    background-color: rgba($color: $black, $alpha: 0.1);
+  }
+  .price {
+    font-family: $font-barlowC;
+    color: $gray;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: $fw-l;
+    letter-spacing: 0.05em;
+    .number {
       font-size: 18px;
       font-family: $font-beautique;
-      margin-bottom: 20px;
-      text-transform: capitalize;
+      color: $white;
     }
+  }
+
+  .amenity {
+    width: 100%;
   }
 
   .amenity-item {
@@ -143,9 +175,14 @@
       gap: 0;
     }
     .detail,
-    .amenity {
+    .sidebar {
       width: 100%;
       position: initial;
+    }
+    .price-wrapper {
+      flex-direction: row;
+      align-self: center;
+      gap: 20px;
     }
     .amenity-list {
       display: grid;
@@ -170,13 +207,16 @@
 
 @include extra-mobile {
   .room-detail {
-    margin-top: 80px;
+    margin-top: 50px;
     .heading-block,
     .amenity-list {
+      margin-bottom: 50px;
       &::before {
+        bottom: -25px;
         width: 100%;
       }
     }
+
     .detail {
       h2 {
         font-size: 24px;
@@ -196,6 +236,11 @@
     }
     .image-group {
       grid-template-columns: repeat(1, 1fr);
+    }
+    .price-wrapper {
+      flex-direction: column;
+      align-self: start;
+      gap: 5px;
     }
     .amenity-list {
       grid-template-columns: repeat(2, 1fr);
