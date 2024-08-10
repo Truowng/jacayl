@@ -1,6 +1,6 @@
-.product-detail {
+.service-detail {
   margin-top: 120px;
-  .product-detail-wrapper {
+  .service-detail-wrapper {
     @include flex(unset, start, 40px);
   }
 
@@ -69,6 +69,7 @@
       text-transform: capitalize;
       margin-bottom: 10px;
       display: block;
+      color: $white;
     }
     .price-wrapper {
       @include flex(space-between, center, 10px);
@@ -84,7 +85,7 @@
       .number {
         font-size: 20px;
         font-family: "Beautique Display";
-        color: #ab8a62;
+        color: $white;
       }
       font-size: 16px;
       font-family: $font-barlowC;
@@ -126,7 +127,7 @@
     }
   }
 
-  .product-detail-content {
+  .service-detail-content {
     margin-top: 80px;
     padding-top: 50px;
     border-top: 1px solid rgba($color: $gray, $alpha: 0.1);
@@ -136,6 +137,7 @@
       margin-bottom: 20px;
       color: $dull-brown;
       text-transform: capitalize;
+      color: $white;
     }
 
     .detail {
@@ -147,6 +149,8 @@
       h6 {
         font-family: $font-beautique;
         margin: 20px 0;
+        color: $white;
+
         &:first-child {
           margin-top: 0;
         }
@@ -191,8 +195,8 @@
 // RESPONSIVE
 
 @include landscape-phone {
-  .product-detail {
-    .product-detail-wrapper {
+  .service-detail {
+    .service-detail-wrapper {
       flex-direction: column;
     }
     .detail-info,
@@ -203,9 +207,9 @@
 }
 
 @include extra-mobile {
-  .product-detail {
+  .service-detail {
     margin-top: 80px;
-    .product-detail-content {
+    .service-detail-content {
       .detail {
         h2 {
           font-size: 24px;

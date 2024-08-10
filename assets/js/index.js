@@ -99,7 +99,7 @@ if (document.querySelector(".room-slider-item .room-slider")) {
     slidesPerView: 1,
     spaceBetween: 60,
     autoplay: {
-      delay: 2000,
+      delay: 2500,
     },
     breakpoints: {
       1199: {
@@ -144,7 +144,27 @@ if (document.querySelector(".service-item .service-item-slider")) {
   );
 }
 
-if (document.querySelector(".product-detail .detail-thumb .swiper")) {
+if (document.querySelector(".product-slider-wrapper .product-slider")) {
+  const productSlider = new Swiper(
+    ".product-slider-wrapper .product-slider.swiper",
+    {
+      direction: "horizontal",
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 2500,
+      },
+      breakpoints: {
+        991: {
+          slidesPerView: 2,
+        },
+        1199: {
+          slidesPerView: 3,
+        },
+      },
+    }
+  );
 }
 
 if (document.querySelector(".product-detail .detail-slider .swiper")) {
@@ -169,9 +189,37 @@ if (document.querySelector(".product-detail .detail-slider .swiper")) {
     },
   });
 }
+if (document.querySelector(".service-detail .detail-slider .swiper")) {
+  const serviceDetailThumb = new Swiper(
+    ".service-detail .detail-thumb .swiper",
+    {
+      direction: "horizontal",
+      speed: 1000,
+      slidesPerView: 8,
+      spaceBetween: 5,
+      loop: true,
+    }
+  );
 
-if (document.querySelector("#promotionModal .sale-slider")) {
-  const saleSlider = new Swiper("#promotionModal .sale-slider .swiper", {
+  const serviceDetailSlider = new Swiper(
+    ".service-detail .detail-slider .swiper",
+    {
+      direction: "horizontal",
+      speed: 500,
+      autoplay: {
+        delay: 2000,
+      },
+      loop: true,
+      effect: "fade",
+      thumbs: {
+        swiper: serviceDetailThumb,
+      },
+    }
+  );
+}
+
+if (document.querySelector(".promotion-modal")) {
+  const saleSlider = new Swiper(".promotion-modal .swiper", {
     direction: "horizontal",
     speed: 500,
     autoplay: {
@@ -181,16 +229,15 @@ if (document.querySelector("#promotionModal .sale-slider")) {
     effect: "fade",
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
     },
   });
 }
 
-if (document.querySelector("#promotionModal")) {
+if (document.querySelector(".promotion-modal")) {
   const promotionModal = new bootstrap.Modal(
-    document.getElementById("promotionModal"),
+    document.querySelector(".promotion-modal"),
     setTimeout(() => {
       promotionModal.show();
-    }, 3000)
+    }, 1000)
   );
 }

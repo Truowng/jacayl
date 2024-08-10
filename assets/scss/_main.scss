@@ -240,6 +240,10 @@
   color: $white;
   font-family: $font-beautique;
   letter-spacing: 0.05em;
+  @include flex(unset, center, 10px);
+  .icon {
+    width: 30px;
+  }
 }
 
 header {
@@ -389,7 +393,7 @@ header {
         font-family: $font-barlowC;
         letter-spacing: 0.3em;
         font-size: 16px;
-        width: fit-content;
+        flex: 1;
       }
       .icon {
         @include flex(center, center, unset);
@@ -623,7 +627,7 @@ header {
 .relate {
   margin: 120px 0 -120px;
   padding: 80px 0;
-  background-color: $black;
+  background-color: $chinese-black;
   border-bottom: 1px solid rgba($color: $white, $alpha: 0.1);
   .heading-block {
     .title {

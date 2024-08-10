@@ -344,8 +344,9 @@
     </header>
     <main>
       <div
-        class="modal fade"
-        id="promotionModal"
+        class="modal fade promotion-modal"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
         tabindex="-1"
         aria-labelledby="promotionModalLabel"
         aria-hidden="true"
@@ -353,7 +354,11 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Promotion Event</h5>
+              <h5 class="modal-title">
+                <span class="icon">
+                  <img src="./assets/images/coupon.png" alt="" /> </span
+                >Promotion Event
+              </h5>
               <button
                 type="button"
                 class="btn"
@@ -383,9 +388,14 @@
                     <div class="swiper-slide">
                       <a href="#" title="Sale" class="sale-item">
                         <img
-                          src="./assets/images/room-detail-5.jpg"
+                          src="./assets/images/room-detail-4.jpg"
                           alt="Sale"
                         />
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" title="Sale" class="sale-item">
+                        <img src="./assets/images/room-item-3.jpg" alt="Sale" />
                       </a>
                     </div>
                   </div>

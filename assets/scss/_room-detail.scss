@@ -81,9 +81,13 @@
     }
   }
 
-  .booking-btn {
-    margin-top: 30px;
-    padding: 10px 15px;
+  // .booking-btn {
+  //   margin-top: 30px;
+  //   padding: 10px 15px;
+  // }
+
+  .btn-wrapper {
+    @include flex(unset, center, 5px);
   }
 
   .image-group {
@@ -102,18 +106,17 @@
     }
   }
 
-  .title {
-    font-size: 18px;
-    font-family: $font-beautique;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    color: $white;
-  }
-
   .sidebar {
     width: 30%;
     position: sticky;
     top: 20px;
+    .title {
+      font-size: 18px;
+      font-family: $font-beautique;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+      color: $white;
+    }
   }
 
   .price-wrapper {
