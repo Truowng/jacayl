@@ -690,6 +690,7 @@ header .mb .nav-item-2:last-child {
   padding: 5px 0;
   width: 100%;
   background-color: transparent;
+  color: #fff;
 }
 .contact .contact-form .input textarea:focus,
 .contact .contact-form .input input:focus {
