@@ -119,11 +119,24 @@
     }
   }
 
+  .price-container {
+    margin-bottom: 30px;
+  }
+
+  .extra-hour {
+    font-size: 16px;
+    font-weight: $fw-l;
+    color: $gray;
+    padding-top: 15px;
+    border-top: 1px solid rgba($color: $gray, $alpha: 0.1);
+    width: fit-content;
+  }
+
   .price-wrapper {
     @include flex(space-between, start, 5px);
     flex-direction: column;
-    margin-bottom: 30px;
     overflow-x: auto;
+    margin-bottom: 15px;
   }
   .line {
     height: 20px;
@@ -182,6 +195,10 @@
       width: 100%;
       position: initial;
     }
+    .extra-hour {
+      width: 100%;
+      text-align: center;
+    }
     .price-wrapper {
       flex-direction: row;
       align-self: center;
@@ -239,6 +256,10 @@
     }
     .image-group {
       grid-template-columns: repeat(1, 1fr);
+    }
+    .extra-hour {
+      width: fit-content;
+      text-align: left;
     }
     .price-wrapper {
       flex-direction: column;

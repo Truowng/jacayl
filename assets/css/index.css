@@ -1052,23 +1052,17 @@ footer .copyright {
 .branch .branch-content .heading-block .title {
   text-transform: capitalize;
 }
-.branch .branch-content .desc {
+.branch .branch-content .content > p {
   font-weight: 300;
   color: #b6b6b6;
   margin-bottom: 20px;
   width: 100%;
   font-size: 16px;
 }
-.branch .branch-content .view-more-btn {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px 15px;
-  margin-bottom: 50px;
-}
-.branch .branch-content .list {
+.branch .branch-content .content ul {
   margin-bottom: 30px;
 }
-.branch .branch-content .item {
+.branch .branch-content .content li {
   display: flex;
   justify-content: unset;
   align-items: start;
@@ -1078,15 +1072,21 @@ footer .copyright {
   font-weight: 300;
   color: #b6b6b6;
 }
-.branch .branch-content .item:last-child {
+.branch .branch-content .content li:last-child {
   margin-bottom: 0;
 }
-.branch .branch-content .item .link {
+.branch .branch-content .content li a {
   transition: all ease 0.3s;
   color: #b6b6b6;
 }
-.branch .branch-content .item .link:hover {
+.branch .branch-content .content li a:hover {
   text-decoration: underline;
+}
+.branch .branch-content .view-more-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 15px;
+  margin-bottom: 50px;
 }
 .branch .best-room-item {
   position: relative;
@@ -2031,14 +2031,26 @@ footer .copyright {
   text-transform: capitalize;
   color: #fff;
 }
+.room-detail .price-container {
+  margin-bottom: 30px;
+}
+.room-detail .extra-hour {
+  font-size: 16px;
+  font-weight: 300;
+  color: #b6b6b6;
+  padding-top: 15px;
+  border-top: 1px solid rgba(182, 182, 182, 0.1);
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .room-detail .price-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: start;
   gap: 5px;
   flex-direction: column;
-  margin-bottom: 30px;
   overflow-x: auto;
+  margin-bottom: 15px;
 }
 .room-detail .line {
   height: 20px;
@@ -2090,6 +2102,10 @@ footer .copyright {
   .room-detail .sidebar {
     width: 100%;
     position: initial;
+  }
+  .room-detail .extra-hour {
+    width: 100%;
+    text-align: center;
   }
   .room-detail .price-wrapper {
     flex-direction: row;
@@ -2145,6 +2161,11 @@ footer .copyright {
   }
   .room-detail .image-group {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .room-detail .extra-hour {
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: left;
   }
   .room-detail .price-wrapper {
     flex-direction: column;
